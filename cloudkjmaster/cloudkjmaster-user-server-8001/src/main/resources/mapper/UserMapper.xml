@@ -1,0 +1,60 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.kj.master.server.mapper.UserMapperXml">
+  
+  
+   <resultMap type="User" id="userResult">
+        <!--主键用<id>标签，表示把表中的id字段映射到实体类User中的user_id属性-->
+        <id property="id" column="id"/>
+        <!--非主键用<reslut>标签，表示把表中的name字段映射到实体类User的user_name属性-->
+        <result property="name" column="nane"/>
+        <result property="password" column="age"/>
+         <result property="status" column="nane"/>
+        <result property="email" column="age"/>
+         <result property="mobile" column="nane"/>
+    </resultMap>   
+  
+   <!-- 查询返回Map集合 -->
+   <select id="queryTestMap" resultType="HashMap">
+        SELECT
+           t.id   AS 'id',
+           t.name  AS 'name',
+           t.password  AS 'password',
+           t.status   AS 'status',
+           t.email  AS 'email',
+           t.mobile  AS 'mobile'
+       FROM
+               t_user t
+   </select>
+   
+   <!-- 查询返回实体类方法一 -->
+   <!--配置一个resultMap 指定返回的类型 -->
+    <!-- <resultMap id="testGo" type="test">
+        <id column="test_id" property="id" />
+        <result column="test_name" property="name" />
+        <result column="test_password" property="password" />
+    </resultMap>
+   <select id="queryTestPojo" resultMap="testGo">
+         SELECT
+           t.test_id,
+           t.test_name,
+           t.test_password
+         FROM
+           test t
+   </select> -->
+   
+   <!-- 查询返回实体类方法二 -->
+   <!--配置一个resultMap 指定返回的类型 -->
+   <select id="queryTestPojo" resultType="user">
+        SELECT
+           t.id  id,
+           t.name name,
+           t.password password,
+           t.status   status,
+           t.email email,
+           t.mobile  mobile
+       FROM
+               t_user t
+   </select>
+   
+</mapper>
