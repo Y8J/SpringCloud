@@ -2,20 +2,18 @@ package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
- * 配置中心启动类
+ * 配置中心模拟客户端
  * @author yangjing
  *
  */
-@RefreshScope
+
 @SpringBootApplication
-@EnableConfigServer
-public class ConfigServer8006 {
+public class ConfigClient8008 {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigServer8006.class, args);
+		SpringApplication.run(ConfigClient8008.class, args);
 	}
 }

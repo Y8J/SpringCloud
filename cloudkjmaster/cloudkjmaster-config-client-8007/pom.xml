@@ -49,5 +49,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+	  <!--消息总线SpringCloudBus kafka-->
+	  <dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+	  </dependency>
 	</dependencies>
 </project>
