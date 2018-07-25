@@ -95,6 +95,6 @@
   	<module>cloudkjmaster-config-server-8006</module>
   	<module>cloudkjmaster-config-client-8007</module>
       <module>cloudkjmaster-config-client-8008</module>
-      <module>cloudkjmaster-jpa-8009</module>
+      <module>cloudkjmaster-jpa-redis-8009</module>
   </modules>
 </project>
